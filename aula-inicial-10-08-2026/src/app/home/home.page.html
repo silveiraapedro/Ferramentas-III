@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Homer
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <br/>
+  <ion-col></ion-col>
+  <strong>Nome: </strong>{{ nome }}<br/>
+  <strong>Salario: </strong>{{ salario }}
+
+  <p [style]="fonte" (click)="alterarEstilo()">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+    ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation 
+    and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic 
+    typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus 
+    PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+
+    <h1>Evento</h1>
+    <ion-button (click)="exibir2()">Exibir</ion-button>
+    <ion-button (click)="alterarEstilo()">Alterar fonte</ion-button>
+    <br>
+
+    <h1>Two way data binding</h1>
+    <ion-input label="Nome" [(ngModel)]="nome"></ion-input>
+</ion-content>

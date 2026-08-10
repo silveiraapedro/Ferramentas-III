@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>diretiva-estrutura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    @if (exibir < 100){
+    <li>3</li>
+    }
+    <li>4</li>
+    <li>5</li>
+  </ul>
+
+  <!--Maneira nova de se utilizar-->
+  @for(item of numeros; track $index){
+    <p>{{item}}</p>
+  }
+
+  <!--Maneira antiga de se usar, não vamos utilizar-->
+  <p *ngFor="let item of numeros">{{ item }}</p>
+
+  <ion-grid>
+    
+  <ion-row >
+    <ion-col><strong>Id</strong></ion-col>
+    <ion-col><strong>Nome</strong></ion-col>
+    <ion-col><strong>Salario</strong></ion-col>
+    <ion-col></ion-col>
+    </ion-row>
+    @for(item of objeto.funcionarios; track $index){
+      <ion-row >
+    <ion-col>{{item.id}}</ion-col>
+    <ion-col>{{item.nome}}</ion-col>
+    <ion-col>{{item.salario}}</ion-col>
+    <ion-col (click)="excluir($index)">Remover</ion-col>
+    </ion-row>
+    }
+  
+</ion-grid>
+</ion-content>
