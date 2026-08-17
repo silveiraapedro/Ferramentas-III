@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Truco paulista
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+        <ion-grid>
+          <ion-row>
+            <ion-col>Nós</ion-col>
+            <ion-col>Eles</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>{{jogador1}}</ion-col>
+            <ion-col>{{jogador2}}</ion-col>
+          </ion-row>
+         
+          <ion-row>
+            <ion-col>{{vitorias1}}</ion-col>
+            <ion-col>{{vitorias2}}</ion-col>
+          </ion-row>
+          
+          <ion-row>
+            <ion-col><ion-button (click)="adicionar1()">+1</ion-button></ion-col>
+            <ion-col><ion-button (click)="adicionar2()">+1</ion-button></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><ion-button (click)="remover1()">-1</ion-button></ion-col>
+            <ion-col><ion-button (click)="remover2()">-1</ion-button></ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div class="botao-truco">
+        <ion-button (click)="truco()"> TRUUUCO!</ion-button>
+        </div>
+
+        <ion-button (click)="zerarPontos()">ZERAR PONTOS</ion-button>
+        <ion-button (click)="zerarVitorias()">ZERAR VITORIAS</ion-button>
+        
+</ion-content>

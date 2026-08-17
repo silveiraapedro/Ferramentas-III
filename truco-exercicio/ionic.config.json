@@ -1,0 +1,7 @@
+{
+  "name": "truco-exercicio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
