@@ -1,7 +1,0 @@
-{
-  "name": "aula-app-component",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
