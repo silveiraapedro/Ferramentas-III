@@ -1,0 +1,7 @@
+{
+  "name": "vendas2-exercicio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
