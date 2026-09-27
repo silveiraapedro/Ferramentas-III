@@ -1,0 +1,7 @@
+{
+  "name": "produtos2-exercicio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>produto-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-select label="Categoria" (ionChange)="pesquisarCategoria($event)">
+    @for(item of categorias; track item){
+    <ion-select-option [value]="item">
+      {{item}}
+    </ion-select-option>
+    }
+  </ion-select>
+
+  <ion-searchbar placeholder="Insira o nome" (ionInput)="pesquisarNome($event)"></ion-searchbar>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-label><strong>Nome</strong></ion-label></ion-col>
+      <ion-col><ion-label><strong>Categoria</strong></ion-label></ion-col>
+      <ion-col><ion-label><strong>Preco</strong></ion-label></ion-col>
+      <ion-col><ion-label><strong>Quantidade</strong></ion-label></ion-col>
+      <ion-col><ion-label><strong>Fornecedor</strong></ion-label></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+    @for(item of produtos(); track item.id){
+      <ion-row>
+      <ion-col><ion-label>{{item.nome}}</ion-label></ion-col>
+      <ion-col><ion-label>{{item.categoria}}</ion-label></ion-col>
+      <ion-col><ion-label>{{item.preco}}</ion-label></ion-col>
+      <ion-col><ion-label>{{item.quantidade}}</ion-label></ion-col>
+      <ion-col><ion-label>{{item.fornecedor}}</ion-label></ion-col>
+      <ion-col><ion-button (click)="excluir(item.id)">Excluir</ion-button></ion-col>
+      <ion-col><ion-button [routerLink]="['/produto-change', item.id]">Alterar</ion-button></ion-col>
+      </ion-row>
+    }
+  </ion-grid>
+
+  <ion-alert 
+    [isOpen]="openAlert" 
+    header="Confirma Exclusão?"
+    [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)" />
+</ion-content>
