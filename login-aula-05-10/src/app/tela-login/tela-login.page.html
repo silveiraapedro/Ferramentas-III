@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tela-login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form">
+  <ion-item>
+    <ion-input type="text" label="Email" formControlName="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" label="Senha" formControlName="senha"></ion-input>
+  </ion-item>
+  </form>
+</ion-content>

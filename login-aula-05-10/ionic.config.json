@@ -1,0 +1,7 @@
+{
+  "name": "login-aula-05-10",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
