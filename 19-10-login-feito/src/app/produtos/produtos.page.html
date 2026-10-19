@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col><strong>Nome</strong></ion-col>
+    <ion-col><strong>Preco</strong></ion-col>
+    <ion-col><strong>Quantidade</strong></ion-col>
+    <ion-col><strong>Status</strong></ion-col>
+  </ion-row>
+  
+  @for(item of produtos(); track item.id){
+    <ion-row>
+      <ion-col>{{item.nome}}</ion-col>
+      <ion-col>{{item.preco}}</ion-col>
+      <ion-col>{{item.quantidade}}</ion-col>
+      <ion-col>{{item.status}}</ion-col>
+  </ion-row>
+  }
+  
+</ion-content>

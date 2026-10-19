@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col><strong>Nome</strong></ion-col>
+  </ion-row>
+  @for(item of categorias(); track item.id){
+  <ion-row>
+    <ion-col>{{item.nome}}</ion-col>
+  </ion-row>
+  }
+</ion-content>
